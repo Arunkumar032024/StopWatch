@@ -7,4 +7,155 @@
     font-family: "Work Sans", sans-serif;
 }
 
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #feefad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 592px;
+    text-align: center;
+    background-color: #68d2e8;
+    padding: 25px;
+    border-radius: 5px;
+    color: #b51b75;
+    box-shadow: 5px 5px 5px #b51b75;
+}
+
+.container h1{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.container .stop-watch{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stop-watch span{
+    position: relative;
+    font-size: 7rem;
+}
+
+.stop-watch span::after{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: #b51b75;
+}
+.stop-watch span#min::after{
+    content: 'MINUTE';
+}
+.stop-watch span#sec::after{
+    content: 'SECOND';
+}
+.stop-watch span#centisec::after{
+    content: 'CENTISECOND';
+}
+.stop-watch #colon{
+    font-size: 3rem;
+}
+
+
+.container .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.buttons button{
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    background-color: #b51b75;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+button i{
+    font-size: 1.5rem;
+    color: #68d2e8;
+    
+    position: relative;
+}
+button i:hover:after{
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #b51b75;
+    color: #feefad;
+    padding: 5px;
+}
+
+button i.fa-play:hover::after{
+    content: 'Play';
+}
+button i.fa-pause:hover::after{
+    content: 'Pause';
+}
+button i.fa-power-off:hover::after{
+    content: 'Reset';
+}
+button i.fa-arrow-rotate-right:hover::after{
+    content: 'Count';
+}
+button i.active{
+    color: #feefad;
+}
+
+.container .count-box{
+    width: 100%;
+    background-color: yellow;
+    margin-top: 20px;
+    ;
+}
+.count-box .count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.count p{
+    font-weight: 600;
+}
+.count #count-id{
+    font-size: 1.5rem;
+}
+.count #duration{
+    font-size: 0.813rem;
+}
+.count #stop-time{
+    font-size: 2rem;
+}
+
+@media (max-width: 592px) {
+    .stop-watch span{
+        font-size: 3rem;
+    }
+    .stop-watch #colon{
+        font-size: 2rem;
+    }
+
+    .stop-watch span::after{
+        font-size: 12px;
+        bottom: -10px;
+    }
+}
