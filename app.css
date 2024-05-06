@@ -32,6 +32,9 @@ body{
     font-size: 30px;
     padding: 20px 0;
 }
+.container h1 i{
+    margin-right: 10px;
+}
 .container .stop-watch{
     width: 100%;
     display: flex;
@@ -67,7 +70,6 @@ body{
     font-size: 3rem;
 }
 
-
 .container .buttons{
     width: 100%;
     display: flex;
@@ -87,6 +89,12 @@ body{
     align-items: center;
     justify-content: center;
     
+}
+button.hide{
+    display: none;
+}
+button.pointer-none{
+    pointer-events: none;
 }
 button i{
     font-size: 1.5rem;
@@ -117,21 +125,20 @@ button i.fa-power-off:hover::after{
 button i.fa-arrow-rotate-right:hover::after{
     content: 'Count';
 }
-button i.active{
+button.active i{
     color: #feefad;
 }
 
 .container .count-box{
     width: 100%;
-    background-color: yellow;
     margin-top: 20px;
-    ;
 }
 .count-box .count{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    background-color: #7fd4e6;
 }
 .count p{
     font-weight: 600;

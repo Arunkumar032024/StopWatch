@@ -19,21 +19,17 @@
             <span id="min">00</span>
             <span id="colon">:</span>
             <span id="sec">00</span>
-            <span id="colon">:</span>
+            <span id="colon">.</span>
             <span id="centisec">00</span>
         </div>
         <div class="buttons">
-            <button class="reset-btn"><i class="fa-solid fa-power-off"></i></button>
-            <button class="start-pause-btn"><i class="fa-solid fa-play"></i></button>
-            <button class="reset-btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+             <button id="reset-btn"><i class="fa-solid fa-power-off"></i></button>
+            <button id="play-btn" class="active"><i class="fa-solid fa-play"></i></button>
+            <button id="pause-btn" class="hide"><i class="fa-solid fa-pause"></i></button>
+            <button id="count-btn" class="pointer-none"><i class="fa-solid fa-arrow-rotate-right"></i></button>
         </div>
 
-        <div class="count-box">
-            <div class="count">
-                <p><span id="count-id">Count</span><br><span id="duration">00:00:00</span></p>
-                <p id="stop-time">00:00.00</p>
-            </div>
-        </div>
+        <div class="count-box"></div>
     </div>
 
     <!-- js file -->
